@@ -23,7 +23,7 @@ public class Main {
     static Queue<String> billQueue = new LinkedList<>();
     static Queue<BankAccount> accountRequests = new LinkedList<>();
 
-    public static void main(String[] args) {
+    static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
         // Task 6 - Physical Structure (Array)
