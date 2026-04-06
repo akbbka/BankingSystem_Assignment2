@@ -23,10 +23,10 @@ public class Main {
     static Queue<String> billQueue = new LinkedList<>();
     static Queue<BankAccount> accountRequests = new LinkedList<>();
 
-    public static void main(String[] args) {
+    static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        // Task 6 - Physical Structure (Array)
+        // Physical Structure (Array)
         System.out.println("--- Task 6: Physical Data Structure (Array) ---");
         BankAccount[] fixedAccounts = new BankAccount[3];
         fixedAccounts[0] = new BankAccount("101", "Akbubek", 150000);
@@ -57,7 +57,7 @@ public class Main {
                     int bChoice = sc.nextInt();
 
                     if (bChoice == 1) {
-                        // Task 5 - Account opening request
+                        // Account opening request
                         System.out.print("Enter your name: ");
                         String name = sc.next();
                         BankAccount req = new BankAccount("ACC" + (accounts.size() + accountRequests.size() + 1), name, 0);
@@ -65,11 +65,11 @@ public class Main {
                         System.out.println("Request added to queue. Wait for admin to process.");
 
                     } else if (bChoice == 2 || bChoice == 3) {
-                        // Task 2 - Deposit & Withdraw
+                        // Deposit & Withdraw
                         handleTransaction(sc, bChoice);
 
                     } else if (bChoice == 4) {
-                        // Task 3 - Undo (pop)
+                        // Undo (pop)
                         if (!transactionHistory.isEmpty()) {
                             System.out.println("Undo: " + transactionHistory.pop() + " → removed");
                         } else {
@@ -77,7 +77,7 @@ public class Main {
                         }
 
                     } else if (bChoice == 5) {
-                        // Task 3 - Peek (display last without removing)
+                        // Peek (display last without removing)
                         if (!transactionHistory.isEmpty()) {
                             System.out.println("Last transaction: " + transactionHistory.peek());
                         } else {
@@ -93,7 +93,7 @@ public class Main {
                         System.out.println("Added: " + bill + " Bill");
 
                     } else if (bChoice == 7) {
-                        // Task 1 - Search by username
+                        // Search by username
                         System.out.print("Enter username to search: ");
                         String searchName = sc.next();
                         boolean found = false;
@@ -154,7 +154,7 @@ public class Main {
                     int aChoice = sc.nextInt();
 
                     if (aChoice == 1) {
-                        // Task 5 - Process account request from queue
+                        // Process account request from queue
                         if (!accountRequests.isEmpty()) {
                             BankAccount newAcc = accountRequests.poll();
                             accounts.add(newAcc);
@@ -164,7 +164,7 @@ public class Main {
                         }
 
                     } else if (aChoice == 2) {
-                        // Task 4 - Process bill from queue
+                        // Process bill from queue
                         if (!billQueue.isEmpty()) {
                             System.out.println("Processing: " + billQueue.poll());
                             if (!billQueue.isEmpty()) {
@@ -177,7 +177,7 @@ public class Main {
                         }
 
                     } else if (aChoice == 3) {
-                        // Task 1 - Display all accounts
+                        // Display all accounts
                         if (accounts.isEmpty()) {
                             System.out.println("No accounts found.");
                         } else {
@@ -189,7 +189,7 @@ public class Main {
                         }
 
                     } else if (aChoice == 4) {
-                        // Task 5 - View pending requests
+                        // View pending requests
                         if (accountRequests.isEmpty()) {
                             System.out.println("No pending account requests.");
                         } else {
@@ -200,7 +200,7 @@ public class Main {
                         }
 
                     } else if (aChoice == 5) {
-                        // Task 4 - View bill queue
+                        // View bill queue
                         if (billQueue.isEmpty()) {
                             System.out.println("Bill queue is empty.");
                         } else {
