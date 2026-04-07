@@ -29,9 +29,9 @@ public class Main {
         // Physical Structure (Array)
         System.out.println("--- Task 6: Physical Data Structure (Array) ---");
         BankAccount[] fixedAccounts = new BankAccount[3];
-        fixedAccounts[0] = new BankAccount("101", "Akbubek", 150000);
-        fixedAccounts[1] = new BankAccount("102", "Sary", 220000);
-        fixedAccounts[2] = new BankAccount("103", "K", 50000);
+        fixedAccounts[0] = new BankAccount("101", "Ali", 150000);
+        fixedAccounts[1] = new BankAccount("102", "Sara", 220000);
+        fixedAccounts[2] = new BankAccount("103", "Kris", 50000);
         for (BankAccount acc : fixedAccounts) System.out.println(acc);
         System.out.println("-----------------------------------------------\n");
 
@@ -85,7 +85,7 @@ public class Main {
                         }
 
                     } else if (bChoice == 6) {
-                        // Task 4 - Add bill payment to queue
+                        // Add bill payment to queue
                         System.out.print("Enter bill name (e.g. Electricity, Internet): ");
                         String bill = sc.next();
                         billQueue.add(bill + " Bill");
